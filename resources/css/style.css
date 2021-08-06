@@ -1,0 +1,349 @@
+:root {
+  /* Dark Palette */
+    --black: #000000ff;
+    --eerie-black: #1C1C1Cff;
+    --jet: #393939ff;
+    --davys-grey: #555555ff;
+    --sonic-silver: #717171ff;
+  /* Light Palette */
+    --spanish-gray: #8E8E8Eff;
+    --silver-chalice: #AAAAAAff;
+    --silver: #C6C6C6ff;
+    --platinum: #E3E3E3ff;
+    --white: #ffffff;
+
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Racing Sans One', cursive;
+    font-family: 'Roboto Slab', serif;
+}
+
+/******************************************
+RESET DEFAULT
+******************************************/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/******************************************
+TAG STYLES
+******************************************/
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3.5rem;  
+  font-family: 'Racing Sans One', cursive;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  max-width: 1000px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--eerie-black);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--jet);
+}
+
+li {
+  list-style: none;
+}
+
+/******************************************
+HEADER
+******************************************/
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/manundercarblackandwhiteopaque.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+}
+
+.cover img {
+  max-width: 500px;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  background-color: var(--platinum);
+  padding: 1rem 1.5rem;
+  z-index: 10;
+}
+
+.navbar-img {
+  display: none;
+  width: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-item {
+  margin-left: 3rem;
+  font-size: 1.6rem;
+
+}
+
+
+.nav-link a:hover {
+  color: var(--silver);
+}
+
+@media only screen and (max-width:760px) {
+
+  .cover {
+    height: 500px;
+  }
+
+  .nav-item {
+    margin-left: .25rem;
+    font-size: .9rem;
+  }
+
+}
+
+/******************************************
+MAIN
+******************************************/
+main{
+  display: block;
+  flex-flow: column;
+  background-color: var(--white);
+}
+
+/* About section */
+
+#about {
+  display: flex;
+  width: 100%;
+  min-height: 800px;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  background-image: url("../images/handing-over-keys-opaque.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#about .container {
+  text-align: center;
+  margin: 30px;
+  max-width: 1000px;
+}
+
+#about .container div{
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+
+#about .container p {
+  font-size: 1.25rem;
+}
+
+/* SERVICES SECTION */
+
+#services {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  min-height: 800px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.75;
+  text-align: center;
+  background-color: var(--eerie-black);
+  color: var(--white);
+  padding: 20px;
+}
+
+#services .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  grid-gap: 1%;
+  text-align: center;
+  width: 100%;
+  margin: 30px;
+}
+
+.service{
+  max-width: 400px;
+  padding: 10px 30px;
+  margin: 15px;
+  background-color: var(--silver);
+  color: var(--eerie-black);
+}
+
+
+/* TEAM SECTION */
+
+#team {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  min-height: 800px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.75;
+  background-color: var(--platinum);
+  padding: 30px;
+}
+
+#team .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+#team .technician1, #team .technician2 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 400px;
+  margin: 30px;
+}
+
+.technician1 img, .technician1 p, .technician2 img, .technician2 p {
+  position: relative;
+  left: -500%;
+  transition: .5s;
+}
+
+#team .container img{
+  max-width: 300px;
+}
+
+
+/* CONTACT SECTION */
+
+#contact {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  min-height: 400px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  line-height: 1.5;
+  background-color: var(--eerie-black);
+  color: var(--white);
+}
+
+#contact .container {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-items: center;
+  margin: 30px;
+}
+
+ /* Locations */
+.locations {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+  
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--black);
+  background-color: var(--platinum);
+  margin: 15px 20px;
+  opacity: 1;
+  width: 300px;
+  height: 200px;
+}
+
+.box .item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+ /* Form */
+.container form{
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+.form{
+  display: flex;
+  flex-flow: column;
+  text-align: right;
+  padding: 10px 30px;
+}
+
+.form-item{
+  padding: 5px;
+}
+
+.form .button {
+  padding: 3px;
+  width: 50px;
+  margin: auto;
+}
+
+/******************************************
+FOOTER
+******************************************/
+
+footer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  min-height: 80px;
+  background-color: var(--platinum);
+  color: inherit;
+}
+
+footer img {
+  width: 48px;
+  margin: 10px 1rem;
+}
+
+footer .copyright {
+  text-align: center;
+  margin: 10px 0;
+}
