@@ -81,7 +81,7 @@ HEADER
   background-image: url("../images/manundercarblackandwhiteopaque.jpg");
   background-position: center;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
 }
 
 .cover img {
@@ -93,6 +93,8 @@ HEADER
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  top: -80px;
   height: 80px;
   width: 100%;
   background-color: var(--platinum);
@@ -139,6 +141,7 @@ main{
   display: block;
   flex-flow: column;
   background-color: var(--white);
+  margin-top: -80px;
 }
 
 /* About section */
