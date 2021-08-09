@@ -8,7 +8,7 @@ function fixedHeader() {
     document.getElementsByClassName('navbar')[0].style.top = '0';
     document.getElementsByClassName('navbar')[0].style.justifyContent = 'space-between';
     document.getElementsByClassName('navbar-img')[0].style.display = 'block';
-    document.getElementsByTagName('main')[0].style.marginTop = "70px";
+    document.getElementsByTagName('main')[0].style.marginTop = '0';
 };
 
 function returnHeader() {
@@ -16,39 +16,18 @@ function returnHeader() {
   document.getElementsByClassName('navbar')[0].style.top = '';
   document.getElementsByClassName('navbar-img')[0].style.display = '';
   document.getElementsByClassName('navbar')[0].style.justifyContent = '';
-  document.getElementsByTagName('main')[0].style.marginTop = "";
+  document.getElementsByTagName('main')[0].style.marginTop = '';
 }
 
-function scrollingNav (e) {
-  if (e.matches) {
-  window.addEventListener("scroll",function() { 
-    if(window.scrollY > 500) {
-       fixedHeader();
-    }
-    if(window.scrollY <= 500) {
-       returnHeader()
-    }
-  },false);
-} else {
-  window.addEventListener("scroll",function() { 
-    if(window.scrollY > 800) {
-       fixedHeader();
-    }
-    if(window.scrollY <= 800) {
-       returnHeader()
-    }
-  },false);
-}
-};
+window.addEventListener("scroll",function() {
+  if(window.scrollY > window.innerHeight - 80) {
+     fixedHeader();
+  }
+  if(window.scrollY <= window.innerHeight - 80) {
+     returnHeader()
+  }
+},false);
 
-// Targets viewports at most 760px wide
-var mediaQuery = window.matchMedia("(max-width: 760px)");
-
-//Register Event Listener
-mediaQuery.addEventListener('change', scrollingNav);
-
-//Initial Check
-scrollingNav(mediaQuery);
 
 
 /*******************************************************
