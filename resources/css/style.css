@@ -81,7 +81,7 @@ HEADER
   background-image: url("../images/manundercarblackandwhiteopaque.jpg");
   background-position: center;
   background-size: cover;
-  height: 800px;
+  height: 90vh;
 }
 
 .cover img {
@@ -124,10 +124,6 @@ HEADER
 }
 
 @media only screen and (max-width:760px) {
-
-  .cover {
-    height: 500px;
-  }
 
   .nav-item {
     margin-left: .25rem;
